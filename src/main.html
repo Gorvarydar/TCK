@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.main.css" /> -->
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class = "head">
+          <div class = "main-title"> The CardKeeper</div>
+           <p>
+             <div class = "title-p">Добавляйте ваши банковские карты</div>
+           </p>
+          </div>
+        <div class="card-list">
+        </div>
+      <div class="binking">
+        <form class="binking__form">
+          <div class="binking__saved-cards">
+            <div class="binking__cards">
+              <div class="binking__card binking__card_new binking__selected">
+                <div class="binking__card-label">
+                  <span class="binking__card-label-plus">+</span>
+                  <span class="binking__card-label-text">Новая карта</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="binking__new-card-form">
+            <div class="binking__panels">
+              <div class="binking__panel binking__front-panel">
+                <img class="binking__form-bank-logo binking__hide">
+                <img class="binking__form-brand-logo binking__hide">
+                <div class="binking__front-fields">
+                  <input   class="binking__field binking__number-field" type="number" placeholder="0000 0000 0000 0000" maxlength= '16'
+                     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" >
+                  <label class="binking__label binking__date-label">Действует до</label>
+                  <input   inputmode="numeric"  class="binking__field binking__month-field binking__date-field" type="number" placeholder="MM" maxlength= '2'
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" 
+                  >
+                  <input  inputmode="numeric"  class="binking__field binking__year-field binking__date-field" type="number" placeholder="YY" maxlength= '2'
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" >
+                </div>
+              </div>
+              <div class="binking__panel binking__back-panel">
+                <input  inputmode="numeric" pattern="[0-9]*" class="binking__field binking__code-field" type="password" maxlength="3">
+                <label class="binking__label binking__code-label">Код<br>на&nbsp;обратной<br>стороне</label>
+              </div>
+            </div>
+            <label class="binking__save-card">
+            <input class = "comment" type ="text" placeholder="добавить комментарий">
+              <!-- <input class="binking__save-card-checkbox" name="save" type="checkbox" /> <span>Сохранить карту для последующих платежей</span> -->
+            </label>
+          </div>
+          <div class="binking__form-bottom">
+            <p class="binking__error binking__hide"></p>
+            <button class="binking__submit-button binking__button" type="submit">Выйти</button>
+          </div>
+          <div class="binking__trust-logos">
+       
+              <img class="binking__trust-logo" src="https://static.binking.io/trust-logos/mastercard.svg" alt="">
+            <img class="binking__trust-logo" src="https://static.binking.io/trust-logos/visa.svg" alt="">
+            <!-- <img class="binking__trust-logo" src="https://static.binking.io/trust-logos/pci-dss.svg" alt=""> -->
+          </div>
+        </form>
+       <div class = "intro">
+       <div class="description">Система принимает только VISA и MasterCard  </div>
+       <a href="https://docs.assist.ru/pages/viewpage.action?pageId=5767473">Тестовые карты</a>
+      </div>   
+    </div>
+  
+    <!-- <script src="https://unpkg.com/binking"></script> -->
+      <script src="main.js"></script>
+     
+</body>
+</html>

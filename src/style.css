@@ -1,0 +1,1058 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+ 
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --white: #ffffff;
+    --gray1: #f5f6f7;
+    --gray2: #f0f2f5;
+    --gray3: #dddfe2;
+    --gray4: #8a8d91;
+    --gray5: #737373;
+    --black: #1c1e21;
+    --light-blue: #e7f3ff;
+    --blue1: #97e3f7;
+    --blue2: rgb(111, 223, 245);
+    --green1: #ff3973;
+    --green2: #f1094f;
+    --green3: #ff9191;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    background: var(--gray2);
+  }
+  
+  input {
+    border: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  .test{
+    font-size: 12px;
+  }
+  .hidden {
+    display: none;
+  }
+  
+  .container {
+    min-height: 100vh;
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin : 3rem 0 2rem 0;
+    text-align: center;
+  }
+  
+  .title-logo {
+    height: 15rem ;
+    position: relative;
+    margin: 0.5rem 0 0.5rem 1rem ;
+  }
+
+  .title-brand-paragraph {
+    font-size: 2.4rem;
+    width: auto;
+   font-weight: bold; 
+}
+
+.title-paragraph {
+    display:none;
+  font-size: 1.6rem;
+  width: auto;
+  font-style: oblique;
+}
+  
+  .form-container,
+  .form {
+    top: 10rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container {
+    max-width: 39.6rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .form {
+    background: var(--white);
+    padding: 1.6rem 1.6rem 2.4rem 1.6rem;
+    border: #ffc900 solid 0.1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    text-align: center;
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4.5rem;
+    border: 1px solid var(--gray3);
+    border-radius: 6px;
+  }
+
+  .smallRed {
+    font-size: 1.1rem;
+    color: var(--gray4);
+    margin-bottom: 0.5rem;
+  }
+  .invalid {
+    border: 1px solid var(--green2);
+  }
+  
+  .input-container:focus-within {
+    border-color: var(--blue1);
+    box-shadow: 0 0 0 2px var(--light-blue);
+  }
+  
+  .input-container--password {
+    margin: 1rem 0;
+  }
+  
+  .password-eye-container {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    position: relative;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .password-eye-container:hover {
+    background: rbga(0, 0, 0, 0.05);
+  }
+
+  .comment{
+    text-align: center;
+    font-size: 1em;
+    padding: auto;
+    margin: 2em auto 2em auto;
+    border-radius: 2em;
+    height: 2em;
+    width: 18em;
+    background-color: var(--gray3);
+  }
+  .comment:hover{
+    text-align: center;
+    font-size: 1em;
+    padding: auto;
+    margin: 2em auto 2em auto;
+    border-radius: 2em;
+    height: 2em;
+    width: 18em;
+    background-color: rgb(179, 247, 224);
+  }
+
+  .register-form {
+    top: 10rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: violet;
+  }
+  
+  /* Eye icon */
+  .password-eye {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0 1.6rem;
+    color: var(--black);
+    font-size: 1.2rem;
+  }
+  
+  .form-input:focus {
+    outline: none;
+  }
+  
+  .form-input:focus::placeholder {
+    opacity: 0.5;
+  }
+  
+  .form-input::placeholder {
+    opacity: 0.9;
+  }
+  
+  .form-log-in-btn {
+    height: 4.5rem;
+    margin-bottom: 2rem;
+    background: var(--blue1);
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 200ms ease-in;
+    cursor: pointer;
+  }
+  
+  .form-log-in-btn:hover {
+    background: var(--blue2);
+  }
+  
+  .form-forgot-password {
+    font-size: 1.3rem;
+    color: var(--blue1);
+    align-self: center;
+  }
+  
+  .form-forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  .divider {
+    margin: 2rem 0;
+    border-bottom: 1px solid var(--gray3);
+  }
+  
+  .form-create-account-btn {
+    font-size: 1.4rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    background: var(--green1);
+    color: var(--white);
+    border-radius: 6px;
+    font-weight: bold;
+    align-self: center;
+    padding: 0 1.6rem;
+    transition: background-color 200ms ease-in;
+  }
+  
+  .form-create-account-btn:hover {
+    background: var(--green2);
+  }
+  
+@media screen and (min-width: 500px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 15rem;
+    }
+  
+    .title-container {
+      margin : 3rem 0 2rem 0;;
+      display: initial;
+      width: 40rem;
+    }
+  
+    .title-logo {
+        margin: 0.5rem 0 0.5rem 1rem ;
+        height:15rem;
+    }
+    .title-brand-paragraph {
+        font-size: 2.4rem;
+        width: auto;
+    }
+  
+    .title-paragraph {
+      font-size: 1.6rem;
+      width: auto;
+    }
+  
+    .form-container {
+      max-width: initial;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .form {
+      width: 39rem;
+    }
+  
+    .input-container {
+      height: 5.2rem;
+    }
+  
+    .form-input {
+      font-size: 1.7rem;
+    }
+  
+    .form-log-in-btn {
+      height: 4.8rem;
+      font-size: 2rem;
+    }
+  
+    .form-forgot-password {
+      font-size: 1.4rem;
+    }
+  
+    .form-create-account-btn {
+      height: 4.8rem;
+      line-height: 4.8rem;
+      font-size: 1.7rem;
+    }
+  
+    .create-page-paragraph {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+    .container {
+      flex-direction: row;
+    }
+  
+    .title-container {
+      padding-bottom:1rem;
+      margin-top: 1rem;
+      margin-right: 5rem;
+      text-align: initial;
+      margin-bottom: 0;
+    }
+  
+    .title-logo {
+      left: -30px;
+      height: 35rem;
+    }
+
+    .title-brand-paragraph{
+      margin-bottom: 1em;
+    }
+
+    .title-brand-paragraph {
+        padding: 0 0 0 6rem;
+        font-size: 3.5rem;
+        width: auto;
+     
+    }
+  
+    .title-paragraph {
+      font-size: 1.8rem;
+      width: auto;
+      padding: 0 0 0 11rem;
+      display: block;
+    }
+  }
+  
+  @media screen and (min-width: 1075px) {
+    .title-container {
+      width: 58rem;
+      padding-right: 15rem;
+      text-align: initial;
+    }
+  
+    .title-brand-paragraph {
+      font-size: 4.5rem;
+      text-align: center;
+    }
+    .title-p{
+      text-align: center;
+      font-size: 5rem;
+    }
+ 
+   .form-container {
+        padding: 0 0 0 0 ;
+    }
+  }
+
+    /********
+   * MAIN-PAGE * 
+   ********/
+ 
+.main-container {
+  display: grid;
+  grid-row: 1fr 3fr;
+  grid-template-areas:
+   'h h h'
+   'b b l'
+  ;
+}
+body {
+  margin: 10px;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+.head{
+    grid-area: h;
+    text-align: center;
+    margin: 3em; 
+}
+.main-title{
+  font-size: 2.5em;
+  font-weight: bold;
+}
+.title-p{
+  margin-top: 1em;
+  font-size: 1.2em;
+  font-style: oblique;
+}
+
+.card-list {
+    grid-area: l;
+    display:flex;
+    justify-content: center;
+    max-width: 40em;
+    flex-wrap: wrap;
+}
+
+.binking__new-card-form {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.binking__panels {
+  width: 500px;
+  height: 260px;
+  position: relative;
+}
+
+.binking__panel {
+  position: absolute;
+  width: 370px;
+  height: 230px;
+  border-radius: 15px;
+}
+
+.binking__front-panel {
+  background: #eeeeee;
+  color: #000;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: background-color 150ms ease;
+}
+
+.binking__front-fields {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 26px;
+}
+
+.binking__number-field {
+  width: 100%;
+  margin-bottom: 15px;
+
+}
+
+.binking__number-field.invalid{
+  width: 100%;
+  margin-bottom: 15px;
+  border: 0.1rem solid var(--green1);
+}
+
+.binking__date-label {
+  margin-bottom: 6px;
+  transition: color 150ms ease;
+}
+
+.binking__date-field {
+  display: inline-block;
+  width: 51px;
+}
+
+.binking__date-field.invalid {
+  display: inline-block;
+  width: 51px;
+  border: 0.1rem solid var(--green1);
+}
+
+.binking__month-field {
+  margin-right: 10px;
+}
+
+.binking__month-field.invalid {
+  margin-right: 10px;
+  border: 0.1rem solid var(--green1);
+}
+
+.binking__back-panel {
+  bottom: 0;
+  right: 0;
+  background: #bbb;
+}
+
+.binking__back-panel:before {
+  content: '';
+  position: absolute;
+  top: 26px;
+  background: #444;
+  width: 100%;
+  height: 60px;
+  left: 0;
+}
+
+.binking__code-field {
+  position: absolute;
+  bottom: 77px;
+  right: 26px;
+  width: 80px;
+}
+.binking__code-field.invalid {
+  position: absolute;
+  bottom: 77px;
+  right: 26px;
+  width: 80px;
+  border: 0.1rem solid var(--green1);
+}
+
+.binking__code-label {
+  position: absolute;
+  width: 80px;
+  right: 26px;
+  bottom: 16px;
+}
+
+.binking__field {
+  padding: 6px 10px;
+  font-family: Courier, monospace;
+  font-size: 20px;
+  text-indent: 2px;
+  border: 1px solid #333;
+  transition: border-color 150ms ease;
+}
+
+.binking__card{
+  width:16em;
+  height: 12em;
+  padding: 10px;
+  background: #fff;
+  border-radius: 1em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  margin-right: 1em;
+  box-shadow: inset 0 0 0 1px #eee;
+  position: relative;
+  cursor: pointer;
+}
+
+.card__comment{
+  margin-top: 1em;
+  text-align: center;
+  width:16em;
+  min-height: 2em;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px #eee;
+  border-radius: 1em;
+  text-overflow:ellipsis;
+  overflow: hidden;
+  padding: 0.5em;
+}
+.card__comment:hover{
+  text-overflow: ellipsis;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:16em;
+  height:max-content;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px #eee;
+  border-radius: 1em;
+  cursor: pointer;
+  white-space:normal;
+  word-break: break-all;
+  padding: 0.5em;
+}
+.binking__cards{
+  display: flex;
+  justify-content: center;
+}
+
+.card__buttons{
+  display: flex;
+  justify-content:space-between;
+  width: 16em;
+}
+.button__delete{
+  padding: 0.2em 0.4em 0.2em 0.4em;
+  width: auto;
+  height:2em;
+  border-radius: 1em;
+  background-color:var(--green1);
+  cursor: pointer;
+}
+.button__cvc{
+  padding: 0.2em 0.4em 0.2em 0.4em;
+  width: 3em;
+  height:2em;
+  border-radius: 1em;
+  background-color: var(--blue1);
+  cursor: pointer;
+  }
+
+.binking__card.binking__selected {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-shadow: inset 0 0 0 3px #ffbb00;
+  width:10em;
+  height: 5em;
+
+}
+.binking__card-last4 {
+  white-space: nowrap;
+  font-size: 1.3em;
+  position: absolute;
+  margin-left: 0.7em; 
+  bottom: 2.5em;
+  color: #888;
+}
+.binking__card-brand-logo {
+  width: 5em;
+  height: 3em;
+  position: absolute;
+  top: 17px;
+  right: 17px;
+}
+
+.binking__card-exp {
+  white-space: nowrap;
+  font-size: 16px;
+  position: absolute;
+  bottom: 17px;
+  right: 17px;
+  color: #888;
+}
+
+.binking__card.binking__card_new {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.binking__card-label-plus {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffbb00;
+}
+
+.binking__card-label-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #561C8A;
+  vertical-align: 1px;
+}
+
+.binking__error {
+  margin-bottom: 0.5em;
+  margin-top: 0;
+  color: #c00;
+}
+
+.binking__error.binking__hide {
+  display: none;
+}
+
+.binking__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: .5em 2.5em;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background: #ffbb00;
+  color: #561c8a;
+}
+
+.binking__button:hover {
+  background: #561c8a;
+  color: #fff;
+}
+
+.binking__button:active {
+  opacity: 0.7;
+}
+
+.binking__button.binking__loading {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.binking__form-bottom {
+  margin-top: 1em;
+  flex-flow: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.binking__trust-logos {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.binking__trust-logo {
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.binking__trust-logo:last-child {
+  margin-right: 0;
+}
+
+.binking__button:disabled {
+  pointer-events: none;
+  opacity: .5
+}
+
+.intro{
+  text-align: center;
+}
+
+.intro a {
+  color: red;
+}
+
+
+.binking__hint {
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 200px) and (max-width:600px) {
+  .main-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1fr 3fr;
+    grid-template-areas:
+     'h h h'
+     'b b l'
+    ;
+  }
+  
+  html{
+    overflow-x: hidden;
+  }
+  body{
+    display: flex;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+  }
+  .head {
+      grid-area: h;
+      order: 0;
+  }
+  .binking__form{
+     order: 1;
+  }
+  .binking{
+   text-align: center;
+  }
+  .binking__panels{
+    display: flex;
+    justify-content: center;
+  }
+  .binking__front-panel{
+    margin: 2em 0 0 6em;
+     width: 55%;
+     height: 10em;
+  }
+  .binking__back-panel{
+    margin: 0 6em 0 0;
+    width: 55%;
+    height: 10em;
+  }
+  .binking__date-label{
+    font-size: 0.8em;
+  }
+  .intro{
+    width: 88%;
+    padding-left: 2em;
+  }
+  .binking__code-field {
+    font-size: 1em;
+    bottom: 16px;
+  }
+  .binking__number-field{
+    font-size: 1.1em;
+  }
+  .binking__date-field{
+    font-size: 1.1em;
+  }
+  .binking__cards{
+  display: flex;
+  justify-content: center;
+  }
+  .main-title{
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .title-p{
+    margin-top: 1em;
+    font-size: 1em;
+    font-style: oblique;
+  }
+  .description{
+    margin-left: 1em;
+    font-size: 0.8em;
+  }
+  .binking__code-label {
+    text-align: right;
+    right: 115px;
+    bottom: 11px;
+    width: auto;
+    font-size: 0.8em;
+  }
+  .card-list {
+      grid-area: l;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 40em;
+      flex-wrap: wrap;
+      order: 2;
+  }
+  .card-list {
+    grid-area: l;
+    display:flex;
+    max-width: 40em;
+    flex-wrap: wrap;
+  }
+  .binking__card{
+    width:16em;
+    height: 12em;
+    padding: 10px;
+    background: #fff;
+    border-radius: 1em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    margin-right: 1em;
+    box-shadow: inset 0 0 0 1px #eee;
+    position: relative;
+    cursor: pointer;
+  }
+  .card__comment{
+    margin-top: 1em;
+    text-align: center;
+    width:16em;
+    min-height: 2em;
+    background: #fff;
+    box-shadow: inset 0 0 0 1px #eee;
+    border-radius: 1em;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    padding: 0.5em;
+  }
+  .card__comment:hover{
+    text-overflow: ellipsis;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:16em;
+    height:max-content;
+    background: #fff;
+    box-shadow: inset 0 0 0 1px #eee;
+    border-radius: 1em;
+    cursor: pointer;
+    white-space:normal;
+    word-break: break-all;
+    padding: 0.5em;
+  }
+  .card__buttons{
+    display: flex;
+    justify-content:space-between;
+    width: 16em;
+  } 
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .main-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1fr 3fr;
+    grid-template-areas:
+     'h h h'
+     'b b l'
+    ;
+  }
+  
+  html{
+    overflow-x: hidden;
+  }
+  body{
+    display: flex;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+  }
+  .head {
+      grid-area: h;
+      order: 0;
+  }
+  .binking__form{
+     order: 1;
+  }
+  .binking{
+   text-align: center;
+  }
+  .binking__card-last4 {
+    white-space: nowrap;
+    font-size: 1.8em;
+    position: absolute;
+    margin-left: 1.4em; 
+    bottom: 2.8em;
+    color: #888;
+  }
+  .binking__card-exp{
+    font-size: 1.8em;
+  }
+  .binking__panels{
+    display: flex;
+    justify-content: center;
+  }
+  .binking__front-panel{
+    margin: 0 0 0 0;
+     width: 75%;
+     height: 78%;
+  }
+  .binking__back-panel{
+    margin: 0 5em 0 0;
+    width: 75%;
+    height: 78%;
+  }
+  .binking__date-label{
+    font-size: 0.8em;
+  }
+  .intro{
+    width: 88%;
+    padding-left: 2em;
+  }
+  .binking__code-field {
+    font-size: 1em;
+    bottom: 16px;
+  }
+  .binking__number-field{
+    font-size: 1.1em;
+  }
+  .binking__date-field{
+    font-size: 1.1em;
+  }
+  .binking__cards{
+  display: flex;
+  justify-content: center;
+  }
+  .main-title{
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  .title-p{
+    margin-top: 1em;
+    font-size: 1.2em;
+    font-style: oblique;
+  }
+  .description{
+    margin-left: 1em;
+    font-size: 0.8em;
+  }
+  .binking__code-label {
+    text-align: right;
+    right: 115px;
+    bottom: 11px;
+    width: auto;
+    font-size: 0.8em;
+  }
+  .card-list {
+      grid-area: l;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 40em;
+      flex-wrap: wrap;
+      order: 2;
+  }
+
+  .binking__card{
+    width:24em;
+    height: 15em;
+    padding: 10px;
+    background: #fff;
+    border-radius: 1em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    margin-right: 1em;
+    box-shadow: inset 0 0 0 1px #eee;
+    position: relative;
+    cursor: pointer;
+  }
+  .card__comment{
+    margin-top: 1em;
+    text-align: center;
+    width:24em;
+    min-height: 2em;
+    background: #fff;
+    box-shadow: inset 0 0 0 1px #eee;
+    border-radius: 1em;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    padding: 0.5em;
+  }
+  .card__comment:hover{
+    text-overflow: ellipsis;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:16em;
+    height:max-content;
+    background: #fff;
+    box-shadow: inset 0 0 0 1px #eee;
+    border-radius: 1em;
+    cursor: pointer;
+    white-space:normal;
+    word-break: break-all;
+    padding: 0.5em;
+  }
+  .card__buttons{
+    display: flex;
+    justify-content:space-between;
+    width: 24em;
+  }
+}

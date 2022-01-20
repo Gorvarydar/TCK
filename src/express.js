@@ -8,8 +8,8 @@ ap.use(express.static(__dirname))
 ap.use(express.static(path.resolve(__dirname, "build")))
 
 
-app.get('/', (req, res) => {
+ap.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, "build", index.html))
 })
 
-app.listen(PORT)
+ap.listen(PORT)

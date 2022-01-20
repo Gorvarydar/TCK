@@ -20,14 +20,10 @@ const auth = getAuth(app);
 const db = getFirestore();
 const user = auth.currentUser
 
-// const addNewCard = document.querySelector('.binking__card-label')
 const cardNumber = document.querySelector(".binking__number-field");
 const cardMonth = document.querySelector('.binking__month-field');
 const cardYear = document.querySelector('.binking__year-field');
 const cardCvc = document.querySelector('.binking__code-field');
-// const but = document.querySelector(".but")
-// const cardList = document.querySelector('.card-list');
-// const smalCard = document.createElement('div');
 const commentField = document.querySelector('.comment')
 const buttonPay = document.querySelector('.binking__button')
 const newCardToList = document.querySelector('.binking__card-label')
@@ -130,154 +126,18 @@ const logOut = () => {
     }
   )
 }
-
-  // class Cards {
-  //   static create(card) {
-  //       return fetch('https://cardkeeper-48ee6-default-rtdb.europe-west1.firebasedatabase.app/cards.json', {
-  //           method: 'POST',
-  //           body: JSON.stringify(card),
-  //           headers: {
-  //               Content : 'application.json'
-  //           }
-  //       })
-  //       .then(response => response.json())
-  //       .then(response =>{card.id = response.name
-  //         return card
-  //       })
-  //       .then(addToLocalStorage)
-  //       .then(Cards.renderCardList)
-  //   }
-  //   static renderCardList () {
-  //     const cards = getStorageCards()
-
-  //     const cardMessage = cards.length 
-  //       ? cards.map(toCard).join('')
-  //       : `<div>NO CADRDS YET</div>`
-
-  //     smalCard.innerHTML = cardMessage
-  //   }
-  // }
-
-//   let logoCard
-//   let typeCard
-
-//   let card = {
-//     number : cardNumber.value.trim(),
-//     cardDate: cardMonth.value + '/' + cardYear.value,
-//     cardCvc: cardCvc.value,
-//     comment:typeCard,
-//     brand: logoCard
-// }
- 
-  // const numberVisaConfirm = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/.test(cardNumber.value);
-  // const numberMasterCardConfirm =  /^(?:5[1-5][0-9]{14})$/.test(cardNumber.value);
-
-  // function toCard (card) {
-  //   return  `<div class="binking__card" >
-  //         <img class="binking__card-brand-logo" src=${card.brand}>
-  //           <div class="binking__card-last4">${'...' + card.number.substr(12, 4)}
-  //           </div>
-  //             <div class="binking__card-exp">${card.cardDate}
-  //             </div>  
-  //           </div>
-  //           <div>${card.comment}</div> `
-  // } 
-
-// addNewCard.addEventListener('click', () => {
-//        card = {
-//         number : cardNumber.value.trim(),
-//         cardDate: cardMonth.value + '/' + cardYear.value,
-//         cardCvc: cardCvc.value,
-//         comment:commentField.value ,
-//         brand:logoImg (cardNumber)
-//        }
-  
-//     if(numberVisaConfirm) {
-//         Cards.create(card).then(() => {
-//          logoCard = "https://static.binking.io/brands-logos/visa-original.svg"
-//          typeCard = 'visa'
-//           card = {
-//             number : cardNumber.value.trim(),
-//             cardDate: cardMonth.value + '/' + cardYear.value,
-//             cardCvc: cardCvc.value,
-//             comment:commentField.value,
-//             brand: logoCard
-//           }
-//       console.log(card)
-//       })
-//       .then(() => {
-//         card = {
-//           number : cardNumber.value.trim(),
-//           cardDate: cardMonth.value + '/' + cardYear.value,
-//           cardCvc: cardCvc.value,
-//           comment:commentField.value,
-//           brand:logoCard
-//         }
-//       })
-//       .then(() => {
-//         cardNumber.value = '';
-//         cardMonth.value = '';
-//         cardCvc.value = '';
-//         cardYear.value = '';
-//         card.comment = '';
-//         card.brand = '';
-//       })
-//     }
-
-//       if(numberMasterCardConfirm) {
-//         Cards.create(card).then(() => {
-//           logoCard = "https://www.mastercard.kz/content/dam/mccom/global/logos/logo-mastercard-mobile.svg"
-//           typeCard = 'mastercard'
-//             card = {
-//               number : cardNumber.value.trim(),
-//               cardDate: cardMonth.value + '/' + cardYear.value,
-//               cardCvc: cardCvc.value,
-//               comment:commentField.value,
-//               brand:logoCard
-//             }
-//           })
-//        .then(() => {
-//         card = {
-//           number : cardNumber.value.trim(),
-//           cardDate: cardMonth.value + '/' + cardYear.value,
-//           cardCvc: cardCvc.value,
-//           comment:commentField.value ,
-//           brand:logoCard
-//         }
-//       })
-//        .then(() => {
-//          cardNumber.value = '';
-//          cardMonth.value = '';
-//          cardCvc.value = '';
-//          cardYear.value = '';
-//          card.comment = '';
-//          card.brand = '';
-//         })
-//         commentField.textContent = ''
-//       }else{console.error()
-//       }
-//     })
-    //    card.comment = '';
-    //      card.brand = '';
-       
-    // cardList.append(smalCard)
-  
-  // window.addEventListener('load', () => {
-  //   userWatcher()
-  // })
-
-      cardNumber.addEventListener('click', () => {
-        cardNumber.classList.remove('invalid')
-      })
-      cardYear.addEventListener('click', () => {
-        cardYear.classList.remove('invalid')
-      })
-      cardMonth.addEventListener('click', () => {
-        cardMonth.classList.remove('invalid')
-      })
-      cardCvc.addEventListener('click', () => {
-        cardCvc.classList.remove('invalid')
-      })
+cardNumber.addEventListener('click', () => {
+  cardNumber.classList.remove('invalid')
+})
+cardYear.addEventListener('click', () => {
+  cardYear.classList.remove('invalid')
+})
+cardMonth.addEventListener('click', () => {
+  cardMonth.classList.remove('invalid')
+})
+cardCvc.addEventListener('click', () => {
+  cardCvc.classList.remove('invalid')
+})
     
 newCardToList.addEventListener('click', () => {
   if(/^(?:5[1-5][0-9]{14})$/.test(cardNumber.value) ||
@@ -311,7 +171,6 @@ newCardToList.addEventListener('click', () => {
     cardMonth.value = '';
     cardCvc.value = '';
     commentField.value = '';
-
     cardMonth.classList.remove('invalid')
     cardYear.classList.remove('invalid')
     cardCvc.classList.remove('invalid')
@@ -324,9 +183,12 @@ newCardToList.addEventListener('click', () => {
 buttonPay.addEventListener('click', (e) => {
   e.preventDefault()
   logOut()
-  
   }
 )
+
+let arr = [1, 2,3,4,5]
+let dar = [... arr]
+console.log(dar)
    
       
 

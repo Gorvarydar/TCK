@@ -4,8 +4,9 @@
   "description": "card_keeper_app",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
+    "start": "node express.js",
     "build": "webpack --mode production"
+    
   },
   "keywords": [
     "js"
@@ -23,6 +24,7 @@
     "webpack-dev-server": "^4.7.3"
   },
   "dependencies": {
+    "express": "^4.17.2",
     "firebase": "^9.4.1"
   }
 }

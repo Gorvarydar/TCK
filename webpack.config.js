@@ -14,7 +14,7 @@ module.exports = {
         assetModuleFilename: './assets/img/[name][ext]'
     },
     devServer: {
-        port: 3018
+        port: 3000
     },
     plugins: [
         new HTMLPlugin({

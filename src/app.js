@@ -181,3 +181,4 @@ formButton.addEventListener('click', (event) => {
 })
 
 
+// "start": "webpack-dev-server --mode development --open",

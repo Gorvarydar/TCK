@@ -1,15 +1,15 @@
 const express = require('express')
 const path = require('path')
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3002
 
-const ap = express()
-ap.use(express.static(__dirname))
-ap.use(express.static(path.resolve(__dirname, "build")))
+const app = express()
+app.use(express.static(__dirname))
+app.use(express.static(path.resolve(__dirname, "build")))
 
 
-ap.get('/', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, "build", index.html))
 })
 
-ap.listen(PORT)
+app.listen(PORT)

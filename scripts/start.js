@@ -36,7 +36,7 @@ const init = async () => {
                 return h.file(path.join(process.cwd(), 'public', request.path));
             }
                 console.log(request.path)
-                return h.file(path.join(process.cwd(), 'public', PATHS[request.path]));
+                return h.file(path.join(process.cwd(), 'public', request.path));
         }
     })
 

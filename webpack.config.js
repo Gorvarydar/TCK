@@ -8,13 +8,13 @@ module.exports = {
         main:'./src/main.js'
     },
     output: {
-        filename: '[name] .js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'public'),
         // filename: "bundle.[chunkhash].js",
         assetModuleFilename: './assets/img/[name][ext]'
     },
     devServer: {
-        port: 3000
+        port: 3088
     },
     plugins: [
         new HTMLPlugin({

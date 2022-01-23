@@ -6,7 +6,8 @@ const port = process.env.PORT || 3002;
 const FILES = /\.(js|js.map|woff|woff2|svg|bmp|jpg|jpeg|gif|png|ico)(\?v=\d+\.\d+\.\d+)?$/;
 
 const PATH = {
-    '/': 'index.html'
+    '/': 'index.html',
+    '/': 'main.html'
 }
 
 const init = async () => {
